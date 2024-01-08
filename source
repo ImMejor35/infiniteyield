@@ -5,7 +5,9 @@ end
 
 pcall(function() getgenv().IY_LOADED = true end)
 
-COREGUI = game:GetService("CoreGui")
+Players = game:GetService("Players")
+
+COREGUI = Players.LocalPlayer.PlayerGui
 if not game:IsLoaded() then
 	local notLoaded = Instance.new("Message")
 	notLoaded.Parent = COREGUI
@@ -15,8 +17,6 @@ if not game:IsLoaded() then
 end
 
 currentVersion = '5.9.4'
-
-Players = game:GetService("Players")
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
