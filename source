@@ -6861,6 +6861,9 @@ addcmd('clip',{'unnoclip'},function(args, speaker)
 		Noclipping:Disconnect()
 	end
 	Clip = true
+	-- Re-Enable Collisions for parts of interest.
+	speaker.Character.Head.CanCollide = true
+	speaker.Character.Torso.CanCollide = true
 	if args[1] and args[1] == 'nonotify' then return end
 	notify('Noclip','Noclip Disabled')
 end)
